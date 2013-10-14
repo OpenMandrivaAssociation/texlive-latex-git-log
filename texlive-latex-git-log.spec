@@ -6,7 +6,7 @@
 # catalog-version 0.9
 Name:		texlive-latex-git-log
 Version:	0.9
-Release:	1
+Release:	2
 Summary:	Typeset git log information
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latex-git-log
@@ -17,7 +17,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Requires:	texlive-latex-git-log.bin
+Provides:	texlive-latex-git-log.bin = %{EVRD}
 
 %description
 The program is run within a git repository, and outputs the
@@ -35,6 +35,7 @@ typesetting in landscape orientation.
 
 #-----------------------------------------------------------------------
 %files
+%{_bindir}/latex-git-log
 %{_texmfdistdir}/scripts/latex-git-log/latex-git-log
 %doc %{_mandir}/man1/latex-git-log.1*
 %doc %{_texmfdistdir}/doc/man/man1/latex-git-log.man1.pdf
@@ -51,6 +52,10 @@ typesetting in landscape orientation.
 %build
 
 %install
+mkdir -p %{buildroot}%{_bindir}
+pushd %{buildroot}%{_bindir}
+    ln -sf ../share/texmf-dist/scripts/latex-git-log/latex-git-log latex-git-log
+popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1

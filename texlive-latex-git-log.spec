@@ -6,7 +6,7 @@
 # catalog-version 0.9
 Name:		texlive-latex-git-log
 Version:	0.9
-Release:	8
+Release:	9
 Summary:	Typeset git log information
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latex-git-log

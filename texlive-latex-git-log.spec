@@ -1,6 +1,6 @@
 Name:		texlive-latex-git-log
 Version:	54010
-Release:	1
+Release:	2
 Summary:	Typeset git log information
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latex-git-log

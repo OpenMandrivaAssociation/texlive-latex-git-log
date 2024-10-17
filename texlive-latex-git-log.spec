@@ -3,7 +3,7 @@ Version:	71402
 Release:	1
 Summary:	Typeset git log information
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/latex-git-log
+URL:		https://www.ctan.org/tex-archive/support/latex-git-log
 License:	GPL3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latex-git-log.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latex-git-log.doc.r%{version}.tar.xz
